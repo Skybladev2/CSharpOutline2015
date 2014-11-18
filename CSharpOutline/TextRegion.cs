@@ -133,7 +133,9 @@ namespace CSharpOutline
         {
             SnapshotPoint point = parser.CurrentPoint;
             ClassificationSpan span = parser.CurrentSpan;
-            if (span == null)
+            char c1 = point.GetChar();
+
+            if (span != null && span.ClassificationType.Classification == "punctuation")
             {
                 char c = point.GetChar();
                 switch (c)
@@ -155,7 +157,7 @@ namespace CSharpOutline
             SnapshotPoint point = parser.CurrentPoint;
             ClassificationSpan span = parser.CurrentSpan;
 
-            if (span == null)
+            if (span != null && span.ClassificationType.Classification == "punctuation")
             {
                 char c = point.GetChar();
                 if (RegionType == TextRegionType.Block && c == '}')
