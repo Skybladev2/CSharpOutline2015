@@ -1,3 +1,4 @@
 obj
 bin
 /CSharpOutline/*.user
+/.vs/CSharpOutline/v14/*.suo

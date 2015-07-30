@@ -27,6 +27,7 @@ namespace CSharpOutline
 
         public SnapshotParser(ITextSnapshot snapshot, IClassifier classifier)
         {
+            Log.Write("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
             Snapshot = snapshot;
             Classifier = classifier;
             ClassificationSpans = Classifier.GetClassificationSpans(new SnapshotSpan(Snapshot, 0, snapshot.Length));
@@ -61,17 +62,5 @@ namespace CSharpOutline
         {
             return CurrentPoint.Position >= Snapshot.Length;
         }
-
-        /*public string PeekString(int chars)
-        {
-            string currentText = CurrentLine.GetText();
-            int startIndex = CurrentPoint - CurrentLine.Start;
-
-            if (startIndex >= currentText.Length) return "";
-            if (startIndex + chars < currentText.Length)
-                return currentText.Substring(startIndex, chars);
-            else
-                return currentText.Substring(startIndex);
-        }*/
     }
 }

@@ -61,6 +61,8 @@
     <Reference Include="Microsoft.VisualStudio.CoreUtility">
       <Private>False</Private>
     </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="Microsoft.VisualStudio.Text.Data">
       <Private>False</Private>
     </Reference>
@@ -88,6 +90,7 @@
   <ItemGroup>
     <Compile Include="CSharpOutliningTaggerProvider.cs" />
     <Compile Include="CSharpOutliningTagger.cs" />
+    <Compile Include="Log.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SnapshotParser.cs" />
     <Compile Include="TextRegion.cs" />
